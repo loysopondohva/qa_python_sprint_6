@@ -46,6 +46,11 @@ class BasePage:
     def switch_to_next_tab(self):
         self.driver.switch_to.window(self.driver.window_handles[1])
 
-    @allure.step("Получить текст url страницы")
+    @allure.step("Получить текущий url страницы")
     def get_page_url(self):
         return self.driver.current_url
+
+    # @allure.step("Получить заголовок страницы")
+    # def get_page_title(self):
+    #     self.wait_for_presence_element(MainPageLocators.PAGE_TITLE)
+    #     return self.driver.title

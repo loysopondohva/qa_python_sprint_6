@@ -9,7 +9,7 @@ class OrderFormLocators:
     LAST_NAME = (By.XPATH, '//input[contains(@placeholder, "Фамилия")]')
     ADDRESS = (By.XPATH, '//input[contains(@placeholder, "Адрес")]')
     METRO = (By.XPATH, '//input[contains(@placeholder, "Станция метро")]')
-    METRO_DROPDOWN_ITEM = (By.XPATH, '//li[contains(@class, "select-search__row")][1]')
+    METRO_DROPDOWN_ITEM = (By.XPATH, '//li[contains(@class, "select-search__row") and @data-index="0"]')
     PHONE = (By.XPATH, '//input[contains(@placeholder, "Телефон")]')
     CONTINUE_BUTTON = (By.XPATH, '//button[contains(text(), "Далее")]')
     TITLE_RENT_PAGE = (By.XPATH, '//div[contains(text(),"Про аренду") and contains(@class, "Order_Header")]')

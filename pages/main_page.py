@@ -64,8 +64,8 @@ class MainPage(BasePage):
         self.click_on_element(MainPageLocators.LOGO_YANDEX_BUTTON)
 
 
-    @allure.step('Получить title страницы')
+    @allure.step('Получить заголовок страницы')
     def get_page_title(self):
-        self.wait_for_presence_element(MainPageLocators.PAGE_TITLE)
-        return self.driver.title
+        page_title = self.wait_for_presence_element(MainPageLocators.PAGE_TITLE)
+        return page_title.get_attribute('textContent')
 
