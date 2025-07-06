@@ -4,17 +4,13 @@ from selenium import webdriver
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 from urls import *
-#from data import *
-#from locators import Locators
 
-
-#  Подключаем webdriver для Chrome
+#  Подключаем webdriver для FireFox
 @pytest.fixture(scope="function")
 def driver():
-    options = webdriver.FirefoxOptions()
-    browser = webdriver.Firefox(options=options)
+    browser = webdriver.Firefox()
     browser.maximize_window()
+    browser.get(main_site)
     yield browser
     browser.quit()
