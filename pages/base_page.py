@@ -49,8 +49,3 @@ class BasePage:
     @allure.step("Получить текущий url страницы")
     def get_page_url(self):
         return self.driver.current_url
-
-    # @allure.step("Получить заголовок страницы")
-    # def get_page_title(self):
-    #     self.wait_for_presence_element(MainPageLocators.PAGE_TITLE)
-    #     return self.driver.title
